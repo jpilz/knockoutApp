@@ -24,7 +24,7 @@ module.exports = {
             loader: "style!css"
         }
         ,{
-            test: /\.(woff|woff2|eot|ttf|svg)$/,
+            test: /\.(woff|woff2|eot|ttf|svg)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
             loader: "url-loader?limit=50000&name=fonts/[name].[ext]"
         },
             {
