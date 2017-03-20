@@ -1,0 +1,2 @@
+Had to edit the font awesome urls in Module parse failed: .../node_modules/font-awesome/fonts/fontawesome-webfont.svg?v=4.7.0 Unexpected token (1:0)",
+to Fix remove the "?v=4.7.0" so the loader would recgonize the extension.
