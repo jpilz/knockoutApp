@@ -18,4 +18,4 @@ class headerModel {
 
 }
 
-export default { viewModel: headerModel, template: require('!raw!./header.html') };
+export default { viewModel: headerModel, template: require('!raw-loader!./header.html') };

@@ -18,4 +18,4 @@ class footerModel {
 
 }
 
-export default { viewModel: footerModel, template: require('!raw!./footer.html') };
+export default { viewModel: footerModel, template: require('!raw-loader!./footer.html') };

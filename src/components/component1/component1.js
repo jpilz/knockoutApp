@@ -18,4 +18,4 @@ class component1Model {
 
 }
 
-export default { viewModel: component1Model, template: require('!raw!./component1.html') };
+export default { viewModel: component1Model, template: require('!raw-loader!./component1.html') };

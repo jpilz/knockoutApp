@@ -18,4 +18,4 @@ class worspaceModel {
 
 }
 
-export default { viewModel: worspaceModel, template: require('!raw!./workspace.html') };
+export default { viewModel: worspaceModel, template: require('!raw-loader!./workspace.html') };

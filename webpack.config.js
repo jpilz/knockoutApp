@@ -1,14 +1,15 @@
 var webpack = require("webpack");
+const path = require('path');
 
 module.exports = {
     entry: './src/app.js',
     output: {
-        path: './lib',
+        path: path.resolve(__dirname,'lib'),
         filename: 'app.bundle.js',
     },
 
     module: {
-        loaders: [{
+        rules: [{
             test: /\.js$/,
             exclude: /node_modules/,
             loader: 'babel-loader?presets[]=es2015'
@@ -21,7 +22,7 @@ module.exports = {
             }
         },{
             test: /\.css$/,
-            loader: "style!css"
+            loader: "style-loader!css-loader"
         }
         ,{
             test: /\.(woff|woff2|eot|ttf|svg)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,

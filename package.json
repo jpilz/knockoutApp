@@ -5,6 +5,7 @@
   "main": "./src/app.js",
   "scripts": {
     "watch": "webpack -w",
+    "dev": "webpack -w",
     "prod": "webpack -p"
   },
   "author": "",
@@ -16,7 +17,7 @@
     "babel-preset-es2016": "^6.16.0",
     "html-loader": "^0.4.4",
     "url-loader": "^0.5.7",
-    "webpack": "^1.13.3"
+    "webpack": "^3.5.5"
   },
   "dependencies": {
     "animate.css": "^3.5.2",
