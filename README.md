@@ -1,6 +1,9 @@
 # knockoutApp
 
-Basic Knockout application using: ES6, Babel, Webpack and Bootstrap. Also gives example of using embeded knockout components.
+Basic Knockout application using: ES6, Babel, Webpack and Bootstrap. 
+
+  * Example of using embeded knockout components.
+  * Application wide event manager publish/subscribe.
 
 #### To install:
 
