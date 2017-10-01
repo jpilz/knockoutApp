@@ -15,6 +15,9 @@ class contextModel {
         this.location = ko.observable("n/a");
         this.paramObj = ko.observable();
         this.debug = ko.observable(false);
+
+        //Event Manager
+        this.eventManager = new ko.subscribable();
     }
 }
 

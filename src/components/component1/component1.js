@@ -16,6 +16,20 @@ class component1Model {
 
     }
 
+    renderHandler(item,component){
+        console.log(item);
+        console.log(component);
+        component.doSomething();
+    }
+    
+    doSomething(){
+        console.log("Hello doSomething");
+    }
+
+    sendEvent() {
+        context.eventManager.notifySubscribers({source:this.componentName()},"sampleEvent");
+    }
+
 }
 
 export default { viewModel: component1Model, template: require('!raw-loader!./component1.html') };

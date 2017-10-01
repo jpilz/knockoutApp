@@ -1,7 +1,8 @@
-<div class="panel" data-bind="visible: visible, attr: {'component_name':componentName, 'id': id}">
+<div class="panel" data-bind="visible: visible, attr: {'component_name':componentName, 'id': id}, template:{afterRender: renderHandler}">
     <div class="row">
         <div class="col-sm-12">
-            <span data-bind="text: componentName"></span>
+            <span data-bind="text: componentName"></span> <br>
+            <button class="btn btn-default" data-bind="click: sendEvent">Send Event to header</button>
         </div>
     </div>
 </div>

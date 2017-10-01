@@ -11,4 +11,7 @@ git pull https://github.com/jpilz/knockoutApp.git
 
 npm install
 
-npm run watch
+npm run watch  (for deployment: npm run prod).
+
+
+Update: Added baisc structure for application wide events.

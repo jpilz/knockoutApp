@@ -14,7 +14,22 @@ class headerModel {
         this.id = this.context.util.guid();
         this.visible = ko.observable(true);
 
+        this.message = ko.observable("");
+
+        this.context.eventManager.subscribe((eventObj) =>{
+            this.handleSampleEvent(eventObj);
+        },this, "sampleEvent");
+
     }
+
+    handleSampleEvent(eventObj) {
+        console.log("Header received this event");
+        this.message("Header received this event");
+        console.log(eventObj);
+    }
+    
+
+
 
 }
 
