@@ -11,7 +11,7 @@ git pull https://github.com/jpilz/knockoutApp.git
 
 npm install
 
-npm run watch 
+npm run dev  
 ```
 
 #### For Production:
