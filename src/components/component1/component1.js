@@ -5,6 +5,7 @@
 import {context} from '../../objects/context.js';
 import ko from 'knockout';
 
+
 class component1Model {
 
     constructor(params) {
@@ -13,6 +14,16 @@ class component1Model {
         this.context = context;
         this.id = this.context.util.guid();
         this.visible = ko.observable(true);
+
+
+        this.validationInputTest = ko.observable().extend({
+            required: true,
+            minLength: 3,
+            pattern: {
+                 message: 'a',
+                 params: '^[a-zA-Z0-9]'
+            }
+        });
 
     }
 
@@ -23,6 +34,7 @@ class component1Model {
     }
     
     doSomething(){
+        console.log("Is Valid: " + this.validationInputTest.isValid());
         console.log("Hello doSomething");
     }
 

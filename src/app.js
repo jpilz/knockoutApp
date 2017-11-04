@@ -5,7 +5,10 @@ import $ from 'jquery';
 
 import 'babel-polyfill';
 import ko from 'knockout';
+import 'knockout.validation';
 import 'bootstrap';
+
+ko.validation.init({insertMessages: false, decorateInputElement: true, errorElementClass: 'inputError'});
 
 // Css Imports
 import 'bootstrap/dist/css/bootstrap.css';

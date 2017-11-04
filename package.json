@@ -33,6 +33,7 @@
     "knockout": "^3.4.1",
     "knockout-mapping": "^2.6.0",
     "knockout-template-loader": "^1.0.1",
+    "knockout.validation": "^2.0.3",
     "lodash": "^4.17.2",
     "raw-loader": "^0.5.1",
     "style-loader": "^0.13.1",
