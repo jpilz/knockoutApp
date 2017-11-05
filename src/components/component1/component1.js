@@ -4,6 +4,7 @@
 "use strict";
 import {context} from '../../objects/context.js';
 import ko from 'knockout';
+import axios from 'axios';
 
 
 class component1Model {
@@ -11,10 +12,10 @@ class component1Model {
     constructor(params) {
         // Profile
         this.componentName = ko.observable("component1");
-        this.context = context;
-        this.id = this.context.util.guid();
+        this.id = context.util.guid();
         this.visible = ko.observable(true);
 
+        this.dataFromAPI = ko.observableArray([]);
 
         this.validationInputTest = ko.observable().extend({
             required: true,
@@ -31,6 +32,36 @@ class component1Model {
         console.log(item);
         console.log(component);
         component.doSomething();
+        component.getJsonAPI();
+    }
+
+    getJsonAPI() {
+
+        let callData = JSON.stringify({});
+        
+            console.log("getJsonAPI:");
+    
+            axios({
+                url: context.apiEntryPointUrl + 'albums',
+                method: 'GET',
+                headers: context.apiContentType,
+                data: callData
+            }).then((response) => {
+                console.log(response.data);
+                this.handleGetJsonAPI(response.data);
+            }).catch((error) =>{
+                console.log("getJsonAPI Error:");
+                console.log(error);
+                this.context.eventManager.notifySubscribers({modalTitle:"API Error",modalBody:"Error getting Job List"},"messageModel");
+            });
+    }
+
+    handleGetJsonAPI(data)
+    {
+
+       //Dataset 
+       this.dataFromAPI = ko.mapping.fromJS(data);
+       console.log(this.dataFromAPI());
     }
     
     doSomething(){

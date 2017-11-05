@@ -16,6 +16,10 @@ class contextModel {
         this.paramObj = ko.observable();
         this.debug = ko.observable(false);
 
+
+        this.apiEntryPointUrl = "https://jsonplaceholder.typicode.com/";
+        this.apiContentType = {'Content-type': 'application/x-www-form-urlencoded; charset=utf-8'};
+
         //Event Manager
         this.eventManager = new ko.subscribable();
     }
