@@ -15,7 +15,8 @@ class component1Model {
         this.id = context.util.guid();
         this.visible = ko.observable(true);
 
-        this.dataFromAPI = ko.observableArray([]);
+        this.dataFromAPI = ko.observableArray();
+        this.selectedDataItem = ko.observable();
 
         this.validationInputTest = ko.observable().extend({
             required: true,
@@ -26,13 +27,18 @@ class component1Model {
             }
         });
 
+        console.log("init comp");
+
     }
 
     renderHandler(item,component){
+
+        console.log("renderHandler");
         console.log(item);
         console.log(component);
         component.doSomething();
         component.getJsonAPI();
+
     }
 
     getJsonAPI() {
@@ -47,7 +53,6 @@ class component1Model {
                 headers: context.apiContentType,
                 data: callData
             }).then((response) => {
-                console.log(response.data);
                 this.handleGetJsonAPI(response.data);
             }).catch((error) =>{
                 console.log("getJsonAPI Error:");
@@ -58,19 +63,19 @@ class component1Model {
 
     handleGetJsonAPI(data)
     {
-
        //Dataset 
-       this.dataFromAPI = ko.mapping.fromJS(data);
-       console.log(this.dataFromAPI());
+       this.dataFromAPI(ko.mapping.fromJS(data)());
     }
     
     doSomething(){
-        console.log("Is Valid: " + this.validationInputTest.isValid());
         console.log("Hello doSomething");
+
     }
 
     sendEvent() {
-        context.eventManager.notifySubscribers({source:this.componentName()},"sampleEvent");
+        console.log("Is Valid: " + this.validationInputTest.isValid());
+        context.eventManager.notifySubscribers({source:this.componentName(), value:this.validationInputTest()},"sampleEvent");
+
     }
 
 }

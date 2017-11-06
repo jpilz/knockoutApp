@@ -23,13 +23,12 @@ class headerModel {
     }
 
     handleSampleEvent(eventObj) {
+
         console.log("Header received this event");
-        this.message("Header received this event");
+        this.message("Header received this event from: " + eventObj.source + " with value: " + eventObj.value);
         console.log(eventObj);
+
     }
-    
-
-
 
 }
 

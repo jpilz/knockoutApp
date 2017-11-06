@@ -5,5 +5,8 @@
             <input  data-bind="value: validationInputTest">
             <button class="btn btn-default displayUnset" data-bind="click: sendEvent">Send Event to header</button>
         </div>
+        <div class="col-sm-4">
+            <select class="form-control" id="hullTypeSelect" data-bind="options: dataFromAPI, optionsText: 'title', optionsValue: 'id', value: selectedDataItem, optionsCaption: 'Choose..'"> </select>
+        </div>
     </div>
 </div>
