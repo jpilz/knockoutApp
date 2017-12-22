@@ -1,6 +1,9 @@
 var webpack = require("webpack");
 const path = require('path');
 
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+var debug = process.env.NODE_ENV !== 'production';
+
 module.exports = {
     entry: './src/app.js',
     output: {
@@ -38,10 +41,31 @@ module.exports = {
         ]
     },
 
-    plugins: [
+    plugins: !debug ?
+    [
+        new UglifyJsPlugin({
+            uglifyOptions: {
+                compress: {
+                    drop_console: true
+                    
+                },
+                output: {
+                    comments: false
+                }
+            }
+        }),
         new webpack.ProvidePlugin({
             $: "jquery",
-            jQuery: "jquery"
+            jQuery: "jquery",
+            ko: "knockout"
+        })
+    ] 
+    :
+    [
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+            ko: "knockout"
         })
     ]
 }

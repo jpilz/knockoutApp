@@ -27,6 +27,21 @@ ko.components.register('app-footer', require('./components/footer/footer').defau
 ko.components.register('component1', require('./components/component1/component1').default);
 
 
+//Enter Key binding:
+//you may have to add: valueUpdate: 'afterkeydown' for validation
+ko.bindingHandlers.enterkey = {
+    init: function (element, valueAccessor, allBindings, viewModel) {
+        var callback = valueAccessor();
+        $(element).keypress(function (event) {
+            var keyCode = (event.which ? event.which : event.keyCode);
+            if (keyCode === 13) {
+                callback.call(viewModel);
+                return false;
+            }
+            return true;
+        });
+    }
+};
 
 $(document).ready(function(){
     ko.applyBindings({});
