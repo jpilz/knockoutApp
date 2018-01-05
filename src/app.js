@@ -8,7 +8,7 @@ import ko from 'knockout';
 import 'knockout.validation';
 import 'knockout-mapping';
 import 'bootstrap';
-import axiso from 'axios';
+import axios from 'axios';
 
 // Css Imports
 import 'bootstrap/dist/css/bootstrap.css';
