@@ -2,8 +2,6 @@ const path = require('path');
 const webpack = require("webpack");
 const fs = require('fs');
 
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-
 var config = {
 
   entry: './src/app.js',
