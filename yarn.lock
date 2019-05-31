@@ -1203,7 +1203,12 @@ bonjour@^3.5.0:
     multicast-dns "^6.0.1"
     multicast-dns-service-types "^1.1.0"
 
-bootstrap@^3.3.7, bootstrap@^3.4.1:
+bootstrap@>=3.4.1:
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.3.1.tgz#280ca8f610504d99d7b6b4bfc4b68cec601704ac"
+  integrity sha512-rXqOmH1VilAt2DyPzluTi2blhk17bO7ef+zLLPlWvG494pDxcM234pJ8wTc/6R40UWizAIIMgxjvxZg5kmsbag==
+
+bootstrap@^3.3.7:
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-3.4.1.tgz#c3a347d419e289ad11f4033e3c4132b87c081d72"
   integrity sha512-yN5oZVmRCwe5aKwzRj6736nSmKDX7pLYwsXiCj/EYmo16hODaBiT4En5btW/jhBF/seV+XMx3aYwukYC3A49DA==
@@ -4142,6 +4147,11 @@ isurl@^1.0.0-alpha5:
     has-to-string-tag-x "^1.2.0"
     is-object "^1.0.1"
 
+jquery@>=3.4.0:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.4.1.tgz#714f1f8d9dde4bdfa55764ba37ef214630d80ef2"
+  integrity sha512-36+AdBzCL+y6qjw5Tx7HgzeGCzC81MDDgaUP8ld2zhx58HdqXGoBd+tHdrBMiyjGQs0Hxs/MLZTu/eHNJJuWPw==
+
 jquery@^3.1.1:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
@@ -4270,7 +4280,7 @@ knockout.validation@^2.0.3:
   resolved "https://registry.yarnpkg.com/knockout.validation/-/knockout.validation-2.0.3.tgz#899de5232364e1ecd5d946e080f6a26293046329"
   integrity sha1-iZ3lIyNk4ezV2UbggPaiYpMEYyk=
 
-knockout@^3.4.2:
+knockout@>=3.5.0:
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/knockout/-/knockout-3.5.0.tgz#6d3e19bf53b1dc4d8de81c97a5ba9672443dc292"
   integrity sha512-vBUF/IsBDzaejHkNpiquKdc5uPrImXuQ4Mb9lEfNNJ5cyHGI8ThDupR+h3eMFZhfmPE/brfwcIAn/fm0yOvJUg==
@@ -5433,6 +5443,11 @@ pngquant-bin@^4.0.0:
     bin-wrapper "^3.0.0"
     execa "^0.10.0"
     logalot "^2.0.0"
+
+popper.js@1.14.3:
+  version "1.14.3"
+  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.14.3.tgz#1438f98d046acf7b4d78cd502bf418ac64d4f095"
+  integrity sha1-FDj5jQRqz3tNeM1QK/QYrGTU8JU=
 
 portfinder@^1.0.9:
   version "1.0.20"

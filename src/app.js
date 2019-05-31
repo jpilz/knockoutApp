@@ -8,6 +8,7 @@ import ko from 'knockout';
 import 'knockout.validation';
 import 'knockout-mapping';
 import 'knockout-punches';
+import 'popper.js';
 
 
 import 'bootstrap';
