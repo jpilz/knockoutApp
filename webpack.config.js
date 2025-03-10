@@ -7,6 +7,7 @@ var config = {
   entry: './src/app.js',
   watch: true,
 
+
   output: {
       filename: 'app.bundle.js',
       path: path.resolve(__dirname, 'lib')
