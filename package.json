@@ -31,7 +31,7 @@
     "@babel/runtime": "^7.2.0",
     "@popperjs/core": "^2.11.8",
     "animate.css": "^3.5.2",
-    "axios": "^1.8.2",
+    "axios": "^0.30.2",
     "babel-polyfill": "^6.16.0",
     "bootstrap": ">=5.3.3",
     "css-loader": "^2.1.0",
